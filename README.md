@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+<!-- 
+引用第三方库的步骤：
+    1、npm install 库名 --save
+    2、在 angular.json 中的build->styles增加使用的第三方库的css文件在node_modules中的路径，在scripts中添加第三方库的js文件在node_modules中的路径
+    3、安装第三方库的类型描述文件，如: npm install --save-dev @types/jquery 
+
+ng 中组件操作：
+    1、创建新组件：ng g component 组件名
+ -->
