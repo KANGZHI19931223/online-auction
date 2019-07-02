@@ -1,0 +1,14 @@
+<img src="http://placehold.it/820x300" alt="">
+<p>
+  {{productDetail.title}}
+</p>
+<p>
+  <app-stars [rating]="productDetail.rating"></app-stars>
+</p>
+<hr>
+<div *ngFor="let comment of comments">
+  <app-stars [rating]="comment.rating"></app-stars>
+  <p>{{comment.user}}</p>
+  <p>{{comment.timestamp}}</p>
+  <p>{{comment.content}}</p>
+</div>

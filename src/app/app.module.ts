@@ -8,6 +8,15 @@ import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StarsComponent } from './stars/stars.component';
+import { ProdDetailComponent } from './prod-detail/prod-detail.component';
+import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductService } from './shared/product.service';
+
+const RoutesConfig: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'product/:id', component: ProdDetailComponent}
+];
 
 @NgModule({
   /**
@@ -20,6 +29,8 @@ import { StarsComponent } from './stars/stars.component';
     SearchComponent,
     CarouselComponent,
     ProductComponent,
+    ProdDetailComponent,
+    HomeComponent,
     StarsComponent
   ],
   /**
@@ -27,11 +38,12 @@ import { StarsComponent } from './stars/stars.component';
    */
   imports: [
     BrowserModule, // 开发web应用必选模块
+    RouterModule.forRoot(RoutesConfig)
   ],
   /**
    * 只能声明服务
    */
-  providers: [],
+  providers: [ProductService],
   /**
    * 声明主组件
    */
